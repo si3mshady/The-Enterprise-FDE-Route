@@ -1,0 +1,15 @@
+tenantId: tenant4-linkedin-by-elliott-arnold
+organizationName: "tenant-4 linkedin Simulation Corp"
+agentConfig:
+  mode: "idle"
+  targetCategory: "none"
+
+service:
+  type: ClusterIP   # required to fix the nil pointer error
+  port: 80
+
+httpRoute:
+  enabled: false
+
+ingress:
+  enabled: false
