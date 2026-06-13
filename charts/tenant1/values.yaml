@@ -3,3 +3,7 @@ organizationName: "Tenant 1 Simulation Corp"
 agentConfig:
   mode: "idle"
   targetCategory: "none"
+
+service:
+  type: ClusterIP   # required to fix the nil pointer error
+  port: 80

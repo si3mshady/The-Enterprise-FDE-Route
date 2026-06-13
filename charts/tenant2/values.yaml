@@ -3,3 +3,7 @@ organizationName: "Tenant 2 Simulation Corp"
 agentConfig:
   mode: "focused"
   targetCategory: "none"
+
+service:
+  type: ClusterIP   # required to fix the nil pointer error
+  port: 80
