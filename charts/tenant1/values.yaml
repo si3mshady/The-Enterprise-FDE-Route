@@ -1,0 +1,5 @@
+tenantId: default-tenant
+organizationName: "Default Simulation Corp"
+agentConfig:
+  mode: "idle"
+  targetCategory: "none"
