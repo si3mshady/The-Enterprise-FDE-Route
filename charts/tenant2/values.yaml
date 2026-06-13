@@ -1,0 +1,5 @@
+tenantId: tenant2
+organizationName: "Tenant 2 Simulation Corp"
+agentConfig:
+  mode: "focused"
+  targetCategory: "none"

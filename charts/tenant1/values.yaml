@@ -1,5 +1,5 @@
-tenantId: default-tenant
-organizationName: "Default Simulation Corp"
+tenantId: tenant1
+organizationName: "Tenant 1 Simulation Corp"
 agentConfig:
   mode: "idle"
   targetCategory: "none"
