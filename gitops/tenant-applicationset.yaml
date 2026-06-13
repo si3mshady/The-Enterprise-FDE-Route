@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: fde-tenant-matrix
+  namespace: argocd
+spec:
+  # Using a Git Generator is more "Pro" than a List Generator
+  # It automatically scans your repo for folders containing a Chart.yaml
+  generators:
+  - git:
+      repoURL: 'https://github.com/si3mshady/The-Enterprise-FDE-Route.git'
+      revision: HEAD
+      directories:
+      - path: charts/*
+  
+  template:
+    metadata:
+      name: '{{path.basename}}-app' # Automatically names the app based on the folder name
+    spec:
+      project: default
+      source:
+        repoURL: 'https://github.com/si3mshady/The-Enterprise-FDE-Route.git'
+        targetRevision: HEAD
+        path: '{{path}}' # Automatically deploys the chart found in that folder
+        helm:
+          valueFiles:
+            - values.yaml
+      destination:
+        server: 'https://kubernetes.default.svc'
+        namespace: '{{path.basename}}'
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
