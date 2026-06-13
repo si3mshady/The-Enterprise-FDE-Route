@@ -7,3 +7,9 @@ agentConfig:
 service:
   type: ClusterIP   # required to fix the nil pointer error
   port: 80
+
+httpRoute:
+  enabled: false
+
+ingress:
+  enabled: false
