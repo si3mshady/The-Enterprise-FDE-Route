@@ -1,4 +1,4 @@
-tenantId: elliotts-arnolds-tenant3
+tenantId: tenant3
 organizationName: "Arnold Simulation Corp"
 agentConfig:
   mode: "idle"
