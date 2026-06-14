@@ -1,0 +1,15 @@
+tenantId: tenant4
+organizationName: "Tenant 4 Simulation Corp"
+agentConfig:
+  mode: "idle"
+  targetCategory: "none"
+
+service:
+  type: ClusterIP   # required to fix the nil pointer error
+  port: 80
+
+httpRoute:
+  enabled: false
+
+ingress:
+  enabled: false
